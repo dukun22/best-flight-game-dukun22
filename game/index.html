@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Langit Nusantara — Game Terbang</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a2233;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  #wrap {
+    position: relative;
+    width: 1280px;
+    max-width: 100vw;
+    aspect-ratio: 16 / 9;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #2f7fd0;
+    border-radius: 6px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  }
+  #hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -28px;
+    text-align: center;
+    color: #9fc6e2;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="1280" height="720"></canvas>
+    <div id="hint">Langit Nusantara — panah / WASD untuk terbang • Enter untuk mulai • R untuk ulangi</div>
+  </div>
+  <script type="module">
+    import { boot } from './src/langit.js';
+    boot();
+  </script>
+</body>
+</html>
